@@ -27,7 +27,7 @@ import SUBNET from "./Logos/SUBNET/SUBNET";
 import ConsoleSingle from "./Logos/Console/ConsoleSingle";
 
 const ApplicationLogo: FC<ApplicationLogoProps> = ({
-  applicationName,
+  applicationName="minerfast",
   subVariant = "simple",
   inverse,
 }) => {

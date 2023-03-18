@@ -28,6 +28,10 @@ const poster = require("../assets/background/loginAnimationPoster.png");
 const CustomLogin = styled.div(({ theme }) => {
   return {
     "& .mainContainer": {
+      width: "100%",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
       height: "100vh",
     },
     "& .decorationPanel": {
@@ -108,53 +112,66 @@ const CustomLogin = styled.div(({ theme }) => {
       },
     },
     "& .formPanel": {
+      position: "relative",
       maxWidth: "520px",
       backgroundColor: get(theme, "login.formBG", "#fff"),
-      [`@media (min-width: ${get(
-        breakPoints,
-        "xs",
-        0
-      )}px) and (max-width: ${get(breakPoints, "md", 0)}px)`]: {
-        maxWidth: "100%",
-      },
-      "& .logoContainer": {
-        display: "flex",
-        height: "215px",
-        alignItems: "center",
-        justifyContent: "center",
-        boxShadow: "0 3px 10px 2px #00000010",
-        "& svg": {
-          width: "325px",
-        },
-      },
-      "& .formContainer": {
-        paddingTop: "40px",
-        display: "flex",
+      // display: "flex",
+      // justifyContent: "center",
+      textAlign: "center",
+      // [`@media (min-width: ${get(
+      //   breakPoints,
+      //   "xs",
+      //   0
+      // )}px) and (max-width: ${get(breakPoints, "md", 0)}px)`]: {
+      //   maxWidth: "100%",
+      // },
+      "& .centerLogin": {
+        display:"flex",
         flexDirection: "column",
-        alignItems: "center",
-        minHeight: "calc(100vh - 215px)",
-        "& .form": {
-          width: "328px",
-          flexGrow: "1",
-          height: "100%",
-        },
-        "& .footer": {
+        position: "absolute",
+        left: "50%",
+        top: "50%",
+        transform: "translate(-50%,-50%)",
+        "& .logoContainer": {
           display: "flex",
-          width: "328px",
-          borderTop: `${get(
-            theme,
-            "login.footerDivider",
-            "#f2f2f2"
-          )} 1px solid`,
-          padding: "35px 0",
-          textAlign: "center",
-          alignItems: "flex-end",
+          // height: "215px",
+          // alignItems: "center",
           justifyContent: "center",
+          alignItems: "center",
+          // boxShadow: "0 3px 10px 2px #00000010",
+          "& svg": {
+            width: "325px",
+          },
         },
-        "& .footer, & .footer a": {
-          color: get(theme, "login.footerElements", "#000"),
-          fontSize: "14px",
-          textDecoration: "none",
+        "& .formContainer": {
+          paddingTop: "40px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          // minHeight: "calc(100vh - 215px)",
+          "& .form": {
+            width: "328px",
+            // flexGrow: "1",
+            height: "100%",
+          },
+          "& .footer": {
+            display: "flex",
+            width: "328px",
+            borderTop: `${get(
+              theme,
+              "login.footerDivider",
+              "#f2f2f2"
+            )} 1px solid`,
+            padding: "35px 0",
+            textAlign: "center",
+            alignItems: "flex-end",
+            justifyContent: "center",
+          },
+          "& .footer, & .footer a": {
+            color: get(theme, "login.footerElements", "#000"),
+            fontSize: "14px",
+            textDecoration: "none",
+          },
         },
       },
     },
@@ -170,8 +187,8 @@ const LoginWrapper: FC<LoginWrapperProps> = ({
 }) => {
   return (
     <CustomLogin>
-      <Grid container className={"mainContainer"} wrap={"nowrap"}>
-        <Grid item xs={"hidden"} sm={"hidden"} md className={"decorationPanel"}>
+      <Grid container className={"mainContainer"}>
+        {/* <Grid item xs={"hidden"} sm={"hidden"} md className={"decorationPanel"}>
           {(promoInfo || promoHeader) && (
             <Grid container>
               <Grid item className={"promoContainer"}>
@@ -197,9 +214,9 @@ const LoginWrapper: FC<LoginWrapperProps> = ({
               <source src={bgVideo} type={"video/mp4"} />
             </video>
           </Grid>
-        </Grid>
-        <Grid item xs={12} className={"formPanel"}>
-          <Grid container>
+        </Grid> */}
+        <Grid item xs={24} className={"formPanel"}>
+          <Grid className={"centerLogin"}>
             <Grid item xs={12} className={"logoContainer"}>
               <ApplicationLogo {...logoProps} />
             </Grid>

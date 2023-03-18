@@ -48,18 +48,18 @@ const demoInputStyles = {
 };
 
 Default.args = {
-  promoHeader: <Fragment>Multi-Cloud Object&nbsp;Store</Fragment>,
-  promoInfo: (
-    <Fragment>
-      MinIO offers high-performance, S3 compatible object storage. <br />
-      Native to Kubernetes, MinIO is the only object storage suite available on
-      every public cloud, every Kubernetes distribution, the private cloud and
-      the edge. MinIO is software-defined and is 100% open source under GNU AGPL
-      v3. <a href={"#"}>link</a>
-    </Fragment>
-  ),
+  // promoHeader: <Fragment>Multi-Cloud Object&nbsp;Store</Fragment>,
+  // promoInfo: (
+  //   <Fragment>
+  //     MinIO offers high-performance, S3 compatible object storage. <br />
+  //     Native to Kubernetes, MinIO is the only object storage suite available on
+  //     every public cloud, every Kubernetes distribution, the private cloud and
+  //     the edge. MinIO is software-defined and is 100% open source under GNU AGPL
+  //     v3. <a href={"#"}>link</a>
+  //   </Fragment>
+  // ),
   logoProps: {
-    applicationName: "console",
+    applicationName: "minerfast",
     subVariant: "AGPL",
   },
   form: (
@@ -83,9 +83,9 @@ Default.args = {
       />
     </Fragment>
   ),
-  formFooter: (
-    <Fragment>
-      Documentation│<a href={"#"}>GitHub</a>│Support│Download
-    </Fragment>
-  ),
+  // formFooter: (
+  //   <Fragment>
+  //     Documentation│<a href={"#"}>GitHub</a>│Support│Download
+  //   </Fragment>
+  // ),
 };
