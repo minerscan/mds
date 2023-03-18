@@ -1,5 +1,5 @@
 export interface ApplicationLogoProps {
-  applicationName: "console" | "operator" | "directpv" | "kes" | "subnet";
-  subVariant?: "simple" | "AGPL" | "standard" | "enterprise";
-  inverse?: boolean;
+    applicationName: "console" | "operator" | "directpv" | "kes" | "subnet" | "minerfast";
+    subVariant?: "simple" | "AGPL" | "standard" | "enterprise";
+    inverse?: boolean;
 }

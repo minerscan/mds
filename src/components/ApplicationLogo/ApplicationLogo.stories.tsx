@@ -38,5 +38,5 @@ const Template: Story<ApplicationLogoProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  applicationName: "console",
+  applicationName: "minerfast",
 };
